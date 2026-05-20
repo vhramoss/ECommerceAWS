@@ -8,11 +8,14 @@
     "cdk": "cdk"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.161",
     "@types/jest": "^30",
-    "@types/node": "^24.10.1",
+    "@types/node": "^24.12.4",
+    "@types/uuid": "^10.0.0",
+    "aws-cdk": "2.1122.0",
+    "aws-sdk": "^2.1693.0",
     "jest": "^30",
     "ts-jest": "^29",
-    "aws-cdk": "2.1122.0",
     "ts-node": "^10.9.2",
     "typescript": "~5.9.3"
   },

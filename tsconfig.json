@@ -4,7 +4,8 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "lib": [
-      "es2022"
+      "es2022",
+      "DOM"
     ],
     "declaration": true,
     "strict": true,
@@ -23,7 +24,18 @@
     "skipLibCheck": true,
     "typeRoots": [
       "./node_modules/@types"
-    ]
+    ],
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "/opt/nodejs/productsLayer": [
+        "./lambda/products/layers/productsLayer/nodejs/productRepository"
+      ],
+      "/opt/nodejs/productsLayer/*": [
+        "./lambda/products/layers/productsLayer/nodejs/*"
+      ]
+    }
   },
   "exclude": [
     "node_modules",
