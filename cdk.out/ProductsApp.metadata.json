@@ -1,0 +1,897 @@
+{
+  "/ProductsApp": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    },
+    {
+      "type": "aws:cdk:stack-tags",
+      "data": [
+        {
+          "key": "cost",
+          "value": "ECommerce"
+        },
+        {
+          "key": "team",
+          "value": "Myteam"
+        }
+      ]
+    }
+  ],
+  "/ProductsApp/ProdcutsDdb": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "tableName": "*",
+        "removalPolicy": "destroy",
+        "partitionKey": {
+          "name": "*",
+          "type": "S"
+        },
+        "billingMode": "PROVISIONED",
+        "readCapacity": "*",
+        "writeCapacity": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:hasPhysicalName",
+      "data": {
+        "Ref": "ProdcutsDdb996CCDF9"
+      }
+    }
+  ],
+  "/ProductsApp/SsmParameterValue:ProductsLayerVersionArn:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SsmParameterValueProductsLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...Function.valueForStringParameter in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:34:54)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/SsmParameterValue:ProductEventsLayerVersionArn:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SsmParameterValueProductEventsLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...Function.valueForStringParameter in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:38:59)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/ProductEventsFunction": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "functionName": "*",
+        "entry": "*",
+        "handler": "*",
+        "memorySize": "*",
+        "timeout": "*",
+        "bundling": {
+          "minify": true,
+          "sourceMap": false,
+          "nodeModules": "*"
+        },
+        "environment": "*",
+        "tracing": "Active",
+        "insightsVersion": "*",
+        "code": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "functionName": "*",
+        "entry": "*",
+        "handler": "*",
+        "memorySize": "*",
+        "timeout": "*",
+        "bundling": {
+          "minify": true,
+          "sourceMap": false,
+          "nodeModules": "*"
+        },
+        "environment": "*",
+        "tracing": "Active",
+        "insightsVersion": "*"
+      }
+    }
+  ],
+  "/ProductsApp/ProductsFetchFunction": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "functionName": "*",
+        "entry": "*",
+        "handler": "*",
+        "memorySize": "*",
+        "timeout": "*",
+        "bundling": {
+          "minify": true,
+          "sourceMap": false,
+          "nodeModules": "*"
+        },
+        "environment": "*",
+        "layers": [
+          "*"
+        ],
+        "tracing": "Active",
+        "insightsVersion": "*",
+        "code": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "functionName": "*",
+        "entry": "*",
+        "handler": "*",
+        "memorySize": "*",
+        "timeout": "*",
+        "bundling": {
+          "minify": true,
+          "sourceMap": false,
+          "nodeModules": "*"
+        },
+        "environment": "*",
+        "layers": [
+          "*"
+        ],
+        "tracing": "Active",
+        "insightsVersion": "*"
+      }
+    }
+  ],
+  "/ProductsApp/ProductsAdminFunction": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "functionName": "*",
+        "entry": "*",
+        "handler": "*",
+        "memorySize": "*",
+        "timeout": "*",
+        "bundling": {
+          "minify": true,
+          "sourceMap": false,
+          "nodeModules": "*"
+        },
+        "environment": "*",
+        "layers": [
+          "*",
+          "*"
+        ],
+        "tracing": "Active",
+        "insightsVersion": "*",
+        "code": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "functionName": "*",
+        "entry": "*",
+        "handler": "*",
+        "memorySize": "*",
+        "timeout": "*",
+        "bundling": {
+          "minify": true,
+          "sourceMap": false,
+          "nodeModules": "*"
+        },
+        "environment": "*",
+        "layers": [
+          "*",
+          "*"
+        ],
+        "tracing": "Active",
+        "insightsVersion": "*"
+      }
+    }
+  ],
+  "/ProductsApp/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsApp/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsApp/ProdcutsDdb/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProdcutsDdb996CCDF9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Table2 in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:21:28)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/ProdcutsDdb/ScalingRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/ProductsApp/ProductEventsFunction/ServiceRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "assumedBy": {
+          "principalAccount": "*",
+          "assumeRoleAction": "*"
+        },
+        "managedPolicies": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addManagedPolicy": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/ProductsApp/ProductEventsFunction/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductEventsFunctionF926527D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:41:38)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/ProductEventsFunction/LogGroup": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "logGroupName": "*"
+      }
+    }
+  ],
+  "/ProductsApp/ProductsFetchFunction/ServiceRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "assumedBy": {
+          "principalAccount": "*",
+          "assumeRoleAction": "*"
+        },
+        "managedPolicies": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addManagedPolicy": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/ProductsApp/ProductsFetchFunction/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductsFetchFunctionAA0035D8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:64:37)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/ProductsFetchFunction/LogGroup": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "logGroupName": "*"
+      }
+    }
+  ],
+  "/ProductsApp/ProductsAdminFunction/ServiceRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "assumedBy": {
+          "principalAccount": "*",
+          "assumeRoleAction": "*"
+        },
+        "managedPolicies": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addManagedPolicy": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/ProductsApp/ProductsAdminFunction/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductsAdminFunction04EE52A3"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:89:37)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/ProductsAdminFunction/LogGroup": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "logGroupName": "*"
+      }
+    }
+  ],
+  "/ProductsApp/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsApp/Exports/Output{\"Fn::GetAtt\":[\"ProdcutsDdb996CCDF9\",\"Arn\"]}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputFnGetAttProdcutsDdb996CCDF9Arn894B8C5C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsApp/Exports/Output{\"Ref\":\"ProdcutsDdb996CCDF9\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefProdcutsDdb996CCDF94457558D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsApp/Exports/Output{\"Fn::GetAtt\":[\"ProductsFetchFunctionAA0035D8\",\"Arn\"]}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputFnGetAttProductsFetchFunctionAA0035D8Arn1DA1098A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsApp/Exports/Output{\"Fn::GetAtt\":[\"ProductsAdminFunction04EE52A3\",\"Arn\"]}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputFnGetAttProductsAdminFunction04EE52A3Arn64FF9CD5"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsApp/ProductEventsFunction/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductEventsFunctionServiceRole75A696BE"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:41:38)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/ProductEventsFunction/ServiceRole/DefaultPolicy": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/ProductsApp/ProductEventsFunction/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/ProductsApp/ProductEventsFunction/LogGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductEventsFunctionLogGroup38D7F56A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:41:38)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/ProductsFetchFunction/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductsFetchFunctionServiceRoleD0214BFB"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:64:37)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/ProductsFetchFunction/ServiceRole/DefaultPolicy": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/ProductsApp/ProductsFetchFunction/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/ProductsApp/ProductsFetchFunction/LogGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductsFetchFunctionLogGroup5C9DABDC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:64:37)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/ProductsAdminFunction/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductsAdminFunctionServiceRole29E44CC6"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:89:37)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/ProductsAdminFunction/ServiceRole/DefaultPolicy": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/ProductsApp/ProductsAdminFunction/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/ProductsApp/ProductsAdminFunction/LogGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductsAdminFunctionLogGroup1BFCBA3C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ProductsAppStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productsApp-stack.ts:89:37)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:31:26)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsApp/ProductEventsFunction/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductEventsFunctionServiceRoleDefaultPolicyF38EFC15"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsApp/ProductsFetchFunction/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductsFetchFunctionServiceRoleDefaultPolicyFE926ADE"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsApp/ProductsAdminFunction/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductsAdminFunctionServiceRoleDefaultPolicy8F7C660B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ]
+}

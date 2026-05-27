@@ -1,0 +1,522 @@
+{
+ "Resources": {
+  "OrdersDdb8DB92DF9": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "pk",
+      "AttributeType": "S"
+     },
+     {
+      "AttributeName": "sk",
+      "AttributeType": "S"
+     }
+    ],
+    "KeySchema": [
+     {
+      "AttributeName": "pk",
+      "KeyType": "HASH"
+     },
+     {
+      "AttributeName": "sk",
+      "KeyType": "RANGE"
+     }
+    ],
+    "ProvisionedThroughput": {
+     "ReadCapacityUnits": 1,
+     "WriteCapacityUnits": 1
+    },
+    "TableName": "orders"
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrdersDdb/Resource"
+   }
+  },
+  "OrderEventsTopic9AB57471": {
+   "Type": "AWS::SNS::Topic",
+   "Properties": {
+    "DisplayName": "Order events topic",
+    "TopicName": "order-events"
+   },
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrderEventsTopic/Resource"
+   }
+  },
+  "OrdersFunctionServiceRoleA7C5E86F": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     },
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/CloudWatchLambdaInsightsExecutionRolePolicy"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrdersFunction/ServiceRole/Resource"
+   }
+  },
+  "OrdersFunctionServiceRoleDefaultPolicyE0D62EE3": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "xray:PutTelemetryRecords",
+        "xray:PutTraceSegments"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "dynamodb:BatchGetItem",
+        "dynamodb:BatchWriteItem",
+        "dynamodb:ConditionCheckItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:DescribeTable",
+        "dynamodb:GetItem",
+        "dynamodb:GetRecords",
+        "dynamodb:GetShardIterator",
+        "dynamodb:PutItem",
+        "dynamodb:Query",
+        "dynamodb:Scan",
+        "dynamodb:UpdateItem"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "OrdersDdb8DB92DF9",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": [
+        "dynamodb:BatchGetItem",
+        "dynamodb:ConditionCheckItem",
+        "dynamodb:DescribeTable",
+        "dynamodb:GetItem",
+        "dynamodb:GetRecords",
+        "dynamodb:GetShardIterator",
+        "dynamodb:Query",
+        "dynamodb:Scan"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::ImportValue": "ProductsApp:ExportsOutputFnGetAttProdcutsDdb996CCDF9Arn894B8C5C"
+       }
+      },
+      {
+       "Action": "sns:Publish",
+       "Effect": "Allow",
+       "Resource": {
+        "Ref": "OrderEventsTopic9AB57471"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "OrdersFunctionServiceRoleDefaultPolicyE0D62EE3",
+    "Roles": [
+     {
+      "Ref": "OrdersFunctionServiceRoleA7C5E86F"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrdersFunction/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "OrdersFunctionC129706A": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-878670310640-us-east-1",
+     "S3Key": "23a4c1398520ea19bf04cd66772d2fb43a38ac1f7034785641c018184ec9bd4a.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "PRODUCTS_DDB": {
+       "Fn::ImportValue": "ProductsApp:ExportsOutputRefProdcutsDdb996CCDF94457558D"
+      },
+      "ORDERS_DDB": {
+       "Ref": "OrdersDdb8DB92DF9"
+      },
+      "ORDER_EVENTS_TOPIC_ARN": {
+       "Ref": "OrderEventsTopic9AB57471"
+      }
+     }
+    },
+    "FunctionName": "OrdersFunction",
+    "Handler": "index.handler",
+    "Layers": [
+     {
+      "Ref": "SsmParameterValueOrderEventsLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter"
+     },
+     {
+      "Ref": "SsmParameterValueOrdersApiLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter"
+     },
+     "arn:aws:lambda:us-east-1:580247275435:layer:LambdaInsightsExtension:60",
+     {
+      "Ref": "SsmParameterValueOrdersLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter"
+     },
+     {
+      "Ref": "SsmParameterValueProductsLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter"
+     }
+    ],
+    "MemorySize": 512,
+    "Role": {
+     "Fn::GetAtt": [
+      "OrdersFunctionServiceRoleA7C5E86F",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs20.x",
+    "Timeout": 2,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+    "OrdersFunctionServiceRoleDefaultPolicyE0D62EE3",
+    "OrdersFunctionServiceRoleA7C5E86F"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrdersFunction/Resource",
+    "aws:asset:path": "asset.23a4c1398520ea19bf04cd66772d2fb43a38ac1f7034785641c018184ec9bd4a",
+    "aws:asset:is-bundled": true,
+    "aws:asset:property": "Code"
+   }
+  },
+  "OrdersFunctionLogGroup8325B1F9": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "LogGroupName": {
+     "Fn::Join": [
+      "",
+      [
+       "/aws/lambda/",
+       {
+        "Ref": "OrdersFunctionC129706A"
+       }
+      ]
+     ]
+    },
+    "RetentionInDays": 731
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrdersFunction/LogGroup/Resource"
+   }
+  },
+  "OrderEventsFunctionServiceRoleE391C3DB": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     },
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/CloudWatchLambdaInsightsExecutionRolePolicy"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrderEventsFunction/ServiceRole/Resource"
+   }
+  },
+  "OrderEventsFunctionServiceRoleDefaultPolicy361DF7A8": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "xray:PutTelemetryRecords",
+        "xray:PutTraceSegments"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "dynamodb:PutItem",
+       "Condition": {
+        "ForAllValues:StringLike": {
+         "dynamodb: LeadingKeys": [
+          "#order_*"
+         ]
+        }
+       },
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::ImportValue": "EventsDdb:ExportsOutputFnGetAttEventsDdbF6692630Arn3CB4F1C7"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "OrderEventsFunctionServiceRoleDefaultPolicy361DF7A8",
+    "Roles": [
+     {
+      "Ref": "OrderEventsFunctionServiceRoleE391C3DB"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrderEventsFunction/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "OrderEventsFunction03F4B31E": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-878670310640-us-east-1",
+     "S3Key": "ef53e965a7f294081daa94aef9caf4367dfac96d139b1afc9dde153f19519ad1.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "EVENTS_DDB": {
+       "Fn::ImportValue": "EventsDdb:ExportsOutputRefEventsDdbF6692630A5AF3A92"
+      }
+     }
+    },
+    "FunctionName": "OrderEventsFunction",
+    "Handler": "index.handler",
+    "Layers": [
+     "arn:aws:lambda:us-east-1:580247275435:layer:LambdaInsightsExtension:60",
+     {
+      "Ref": "SsmParameterValueOrderEventsLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter"
+     },
+     {
+      "Ref": "SsmParameterValueOrderEventsRepositoryLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter"
+     }
+    ],
+    "MemorySize": 512,
+    "Role": {
+     "Fn::GetAtt": [
+      "OrderEventsFunctionServiceRoleE391C3DB",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs20.x",
+    "Timeout": 2,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+    "OrderEventsFunctionServiceRoleDefaultPolicy361DF7A8",
+    "OrderEventsFunctionServiceRoleE391C3DB"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrderEventsFunction/Resource",
+    "aws:asset:path": "asset.ef53e965a7f294081daa94aef9caf4367dfac96d139b1afc9dde153f19519ad1",
+    "aws:asset:is-bundled": true,
+    "aws:asset:property": "Code"
+   }
+  },
+  "OrderEventsFunctionLogGroupE83B2D43": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "LogGroupName": {
+     "Fn::Join": [
+      "",
+      [
+       "/aws/lambda/",
+       {
+        "Ref": "OrderEventsFunction03F4B31E"
+       }
+      ]
+     ]
+    },
+    "RetentionInDays": 731
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrderEventsFunction/LogGroup/Resource"
+   }
+  },
+  "OrderEventsFunctionAllowInvokeOrdersAppOrderEventsTopic185EA910EE62D8D6": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "OrderEventsFunction03F4B31E",
+      "Arn"
+     ]
+    },
+    "Principal": "sns.amazonaws.com",
+    "SourceArn": {
+     "Ref": "OrderEventsTopic9AB57471"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrderEventsFunction/AllowInvoke:OrdersAppOrderEventsTopic185EA910"
+   }
+  },
+  "OrderEventsFunctionOrderEventsTopicE63D7921": {
+   "Type": "AWS::SNS::Subscription",
+   "Properties": {
+    "Endpoint": {
+     "Fn::GetAtt": [
+      "OrderEventsFunction03F4B31E",
+      "Arn"
+     ]
+    },
+    "Protocol": "lambda",
+    "TopicArn": {
+     "Ref": "OrderEventsTopic9AB57471"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/OrderEventsFunction/OrderEventsTopic/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/+1W30/bMBD+W/DjZDIE4qVvLfshNAqsReyhQuhqX9MDx458DiiL8r9PdpK2jGl7QNs0MSmV4+/sft93l1x8mB0eH2cHe/DI+0rf7xtaZs08gLqX8Mi3ja4tFE4vs+YKlgYXjQhxPIcCxUi8EVKU4AMFcvYT1mLUCLsNhbqMt3PRSsHOh5+vWJIxZPOp0xG6nF1cn85PL87fvxNSeAR9AiUoCnW/9dFTwCdYeyNPVjbpbCVbzporV5JaNEITlwbqHdUhRjbzfmfE5LxasvJURkvRbgT7TWh16ciGwbl3wSlnxEgYKJYahBQrMgH9pTOkBqG70BcK6ykyQ44Tp4cVHnNytp9oBH2GIaD/XGG1q29XWSs7ylvrNN5xdp6GD5VVvW5f2UAbu6s+sJMBtMEPAtZgtUHfzwosnK/n9HWTLCrQVYPtZWV1LFQsZUGWVrUYBV9hrHHlFU6hFKMVGEYporqp05VB7oxE3gfyzha4yaOBGj2L0SLNtr8bKYIHlajEWAV6QCEFWaZ8HfgaPW+zprqnJjI0312vKxX/uOEX1/x1mG9vJEGRNTOXejIwVwXqSWqvpSerqAQzVspVG7JuTdwwThkZZBVgIUed+hNFtYvmCVaP/cAZ0wtaX7nLgWJodIumj4YAan1qDVncxKKzXwe1nu6yvlDH34r+L8SOjvTVikZlB6fnfKC/cjHyTNVzWOt5gIDxveEndfiz8G/WnnLVpamVfHQLzBg4G8dB8lE2qdQ9hgkwbrtFdwTImpOVHb786V/QF8TcnRJczllz5vKP3lXlohGmv92efeSPwCRn2Na2coZdj0vWEgl4KDCgl0niPEBONm9lbHzZHb99ODzI4rV3x0T7fVPOZt34DVFy1Yp2CgAA"
+   },
+   "Metadata": {
+    "aws:cdk:path": "OrdersApp/CDKMetadata/Default"
+   }
+  }
+ },
+ "Parameters": {
+  "SsmParameterValueOrdersLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "OrdersLayerVersionArn"
+  },
+  "SsmParameterValueProductsLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "ProductsLayerVersionArn"
+  },
+  "SsmParameterValueOrdersApiLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "OrdersApiLayerVersionArn"
+  },
+  "SsmParameterValueOrderEventsLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "OrderEventsLayerVersionArn"
+  },
+  "SsmParameterValueOrderEventsRepositoryLayerVersionArnC96584B6F00A464EAD1953AFF4B05118Parameter": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "OrderEventsRepositoryLayerVersionArn"
+  },
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Outputs": {
+  "ExportsOutputFnGetAttOrdersFunctionC129706AArn1C82C3BD": {
+   "Value": {
+    "Fn::GetAtt": [
+     "OrdersFunctionC129706A",
+     "Arn"
+    ]
+   },
+   "Export": {
+    "Name": "OrdersApp:ExportsOutputFnGetAttOrdersFunctionC129706AArn1C82C3BD"
+   }
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,1062 @@
+{
+  "/ECommerceApi": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    },
+    {
+      "type": "aws:cdk:stack-tags",
+      "data": [
+        {
+          "key": "cost",
+          "value": "ECommerce"
+        },
+        {
+          "key": "team",
+          "value": "Myteam"
+        }
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApiLogs": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/ECommerceApi/ECommerceApi": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "restApiName": "*",
+        "cloudWatchRole": true,
+        "deployOptions": {
+          "accessLogDestination": "*",
+          "accessLogFormat": "*"
+        }
+      }
+    }
+  ],
+  "/ECommerceApi/ProductRequestValidator": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "restApi": "*",
+        "requestValidatorName": "*",
+        "validateRequestBody": true
+      }
+    }
+  ],
+  "/ECommerceApi/ProductModel": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "modelName": "*",
+        "restApi": "*",
+        "schema": {
+          "type": "object",
+          "properties": "*",
+          "required": "*"
+        }
+      }
+    }
+  ],
+  "/ECommerceApi/OrderDeletionValidator": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "restApi": "*",
+        "requestValidatorName": "*",
+        "validateRequestParameters": true
+      }
+    }
+  ],
+  "/ECommerceApi/OrderRequestValidator": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "restApi": "*",
+        "requestValidatorName": "*",
+        "validateRequestBody": true
+      }
+    }
+  ],
+  "/ECommerceApi/OrderModel": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "modelName": "*",
+        "restApi": "*",
+        "schema": {
+          "type": "object",
+          "properties": "*",
+          "required": "*"
+        }
+      }
+    }
+  ],
+  "/ECommerceApi/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ECommerceApi/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApiLogs/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiLogs16FEC884"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LogGroup2 in aws-cdk-lib...",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:19:26)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiE79CFB4A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:20:21)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/CloudWatchRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "assumedBy": {
+          "principalAccount": "*",
+          "assumeRoleAction": "*"
+        },
+        "managedPolicies": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "applyRemovalPolicy": [
+          "retain"
+        ]
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Account": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiAccountA3F17E7C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:20:21)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Deployment": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "description": "*",
+        "api": "*",
+        "retainDeployments": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/DeploymentStage.prod": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "deployment": "*",
+        "accessLogDestination": "*",
+        "accessLogFormat": "*"
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Endpoint": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiEndpointA4C226BB"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:20:21)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/ECommerceApi/ProductRequestValidator/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductRequestValidator88FB595D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RequestValidator2 in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:126:41)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ProductModel/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductModelEA4C0B4C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Model2 in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:132:30)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/OrderDeletionValidator/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "OrderDeletionValidator2CB779B7"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RequestValidator2 in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:54:40)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/OrderRequestValidator/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "OrderRequestValidator853A12CD"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RequestValidator2 in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:70:39)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/OrderModel/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "OrderModelF3BF987F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Model2 in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:76:28)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/CloudWatchRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiCloudWatchRoleA0000002"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:20:21)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Deployment/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiDeploymentC537DBB673276bc2a8a73883eea55b2aedb1e46a"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:20:21)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/DeploymentStage.prod/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiDeploymentStageprod34BEADF8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:20:21)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parent": "*",
+        "pathPart": "*"
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parent": "*",
+        "pathPart": "*"
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproducts320180E3"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...RootResource.addResource in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:116:43)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/GET": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": "*"
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parent": "*",
+        "pathPart": "*"
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/POST": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "requestValidator": "*",
+          "requestModels": "*"
+        }
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiorders2C7B5D79"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...RootResource.addResource in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:47:41)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/GET": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": "*"
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/DELETE": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "requestParameters": "*",
+          "requestValidator": "*"
+        }
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/POST": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "requestValidator": "*",
+          "requestModels": "*"
+        }
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/GET/ApiPermission.ECommerceApi3E70358D.GET..products": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsGETApiPermissionECommerceApi3E70358DGETproducts33045144"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:117:26)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/GET/ApiPermission.Test.ECommerceApi3E70358D.GET..products": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsGETApiPermissionTestECommerceApi3E70358DGETproducts900FFBF1"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:117:26)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/GET/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsGET39FAC467"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:117:26)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsidBA77D237"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addResource in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:120:52)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/GET": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": "*"
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/PUT": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "requestValidator": "*",
+          "requestModels": "*"
+        }
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/DELETE": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": "*"
+      }
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/POST/ApiPermission.ECommerceApi3E70358D.POST..products": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsPOSTApiPermissionECommerceApi3E70358DPOSTproducts4EB30814"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:160:26)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/POST/ApiPermission.Test.ECommerceApi3E70358D.POST..products": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsPOSTApiPermissionTestECommerceApi3E70358DPOSTproductsD0ACCFC9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:160:26)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/POST/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsPOST00574EB0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:160:26)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/GET/ApiPermission.ECommerceApi3E70358D.GET..orders": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiordersGETApiPermissionECommerceApi3E70358DGETorders5DC1DB41"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:52:24)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/GET/ApiPermission.Test.ECommerceApi3E70358D.GET..orders": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiordersGETApiPermissionTestECommerceApi3E70358DGETordersEAD5E367"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:52:24)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/GET/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiordersGETECA9A526"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:52:24)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/DELETE/ApiPermission.ECommerceApi3E70358D.DELETE..orders": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiordersDELETEApiPermissionECommerceApi3E70358DDELETEorders9CB804B8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:61:24)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/DELETE/ApiPermission.Test.ECommerceApi3E70358D.DELETE..orders": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiordersDELETEApiPermissionTestECommerceApi3E70358DDELETEordersC4C6A715"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:61:24)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/DELETE/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiordersDELETEF51EE1D4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:61:24)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/POST/ApiPermission.ECommerceApi3E70358D.POST..orders": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiordersPOSTApiPermissionECommerceApi3E70358DPOSTorders4EAB5C4C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:104:24)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/POST/ApiPermission.Test.ECommerceApi3E70358D.POST..orders": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiordersPOSTApiPermissionTestECommerceApi3E70358DPOSTordersB735BAF6"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:104:24)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/orders/POST/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiordersPOST2157B406"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createOrdersService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:104:24)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:40:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/GET/ApiPermission.ECommerceApi3E70358D.GET..products.{id}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsidGETApiPermissionECommerceApi3E70358DGETproductsid26FCFDD5"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:121:27)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/GET/ApiPermission.Test.ECommerceApi3E70358D.GET..products.{id}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsidGETApiPermissionTestECommerceApi3E70358DGETproductsidCF7E569E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:121:27)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/GET/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsidGET92BAF597"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:121:27)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/PUT/ApiPermission.ECommerceApi3E70358D.PUT..products.{id}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsidPUTApiPermissionECommerceApi3E70358DPUTproductsid4B1016ED"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:168:27)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/PUT/ApiPermission.Test.ECommerceApi3E70358D.PUT..products.{id}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsidPUTApiPermissionTestECommerceApi3E70358DPUTproductsidC7AA5068"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:168:27)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/PUT/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsidPUTD9C81FF1"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:168:27)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/DELETE/ApiPermission.ECommerceApi3E70358D.DELETE..products.{id}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsidDELETEApiPermissionECommerceApi3E70358DDELETEproductsidD6C7799B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:176:27)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/DELETE/ApiPermission.Test.ECommerceApi3E70358D.DELETE..products.{id}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsidDELETEApiPermissionTestECommerceApi3E70358DDELETEproductsid59D5159E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:176:27)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ECommerceApi/ECommerceApi/Default/products/{id}/DELETE/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ECommerceApiproductsidDELETE504E96B0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "ECommerceApiStack.createProductsService (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:176:27)",
+        "new ECommerceApiStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ecommerceApi-stack.ts:39:14)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:56:27)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ]
+}

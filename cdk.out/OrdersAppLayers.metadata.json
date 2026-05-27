@@ -1,0 +1,287 @@
+{
+  "/OrdersAppLayers": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:40:30)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    },
+    {
+      "type": "aws:cdk:stack-tags",
+      "data": [
+        {
+          "key": "cost",
+          "value": "ECommerce"
+        },
+        {
+          "key": "team",
+          "value": "Myteam"
+        }
+      ]
+    }
+  ],
+  "/OrdersAppLayers/OrdersLayer": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "code": "*",
+        "compatibleRuntimes": "*",
+        "layerVersionName": "*",
+        "removalPolicy": "retain"
+      }
+    }
+  ],
+  "/OrdersAppLayers/OrdersLayerVersionArn": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parameterName": "*",
+        "stringValue": "*"
+      }
+    }
+  ],
+  "/OrdersAppLayers/OrdersApiLayer": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "code": "*",
+        "compatibleRuntimes": "*",
+        "layerVersionName": "*",
+        "removalPolicy": "retain"
+      }
+    }
+  ],
+  "/OrdersAppLayers/OrdersApiLayerVersionArn": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parameterName": "*",
+        "stringValue": "*"
+      }
+    }
+  ],
+  "/OrdersAppLayers/orderEventsLayer": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "code": "*",
+        "compatibleRuntimes": "*",
+        "layerVersionName": "*",
+        "removalPolicy": "retain"
+      }
+    }
+  ],
+  "/OrdersAppLayers/OrderEventsLayerVersionArn": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parameterName": "*",
+        "stringValue": "*"
+      }
+    }
+  ],
+  "/OrdersAppLayers/orderEventsRepositoryLayer": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "code": "*",
+        "compatibleRuntimes": "*",
+        "layerVersionName": "*",
+        "removalPolicy": "retain"
+      }
+    }
+  ],
+  "/OrdersAppLayers/OrderEventsRepositoryLayerVersionArn": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parameterName": "*",
+        "stringValue": "*"
+      }
+    }
+  ],
+  "/OrdersAppLayers/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/OrdersAppLayers/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/OrdersAppLayers/OrdersLayer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "OrdersLayerCD96C328"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LayerVersion2 in aws-cdk-lib...",
+        "new OrdersAppLayersStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ordersAppLayers-stack.ts:10:29)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:40:30)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/OrdersAppLayers/OrdersLayerVersionArn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "OrdersLayerVersionArnE2672B9F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new StringParameter2 in aws-cdk-lib...",
+        "new OrdersAppLayersStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ordersAppLayers-stack.ts:17:9)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:40:30)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/OrdersAppLayers/OrdersApiLayer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "OrdersApiLayer2963F6C6"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LayerVersion2 in aws-cdk-lib...",
+        "new OrdersAppLayersStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ordersAppLayers-stack.ts:22:32)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:40:30)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/OrdersAppLayers/OrdersApiLayerVersionArn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "OrdersApiLayerVersionArnD0B5DDEF"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new StringParameter2 in aws-cdk-lib...",
+        "new OrdersAppLayersStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ordersAppLayers-stack.ts:29:9)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:40:30)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/OrdersAppLayers/orderEventsLayer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "orderEventsLayer9A459F11"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LayerVersion2 in aws-cdk-lib...",
+        "new OrdersAppLayersStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ordersAppLayers-stack.ts:34:34)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:40:30)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/OrdersAppLayers/OrderEventsLayerVersionArn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "OrderEventsLayerVersionArn4DB35550"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new StringParameter2 in aws-cdk-lib...",
+        "new OrdersAppLayersStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ordersAppLayers-stack.ts:40:9)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:40:30)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/OrdersAppLayers/orderEventsRepositoryLayer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "orderEventsRepositoryLayer8BD23196"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LayerVersion2 in aws-cdk-lib...",
+        "new OrdersAppLayersStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ordersAppLayers-stack.ts:44:44)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:40:30)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/OrdersAppLayers/OrderEventsRepositoryLayerVersionArn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "OrderEventsRepositoryLayerVersionArn8C0E7342"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new StringParameter2 in aws-cdk-lib...",
+        "new OrdersAppLayersStack (/home/victor-ramos/Documents/ECommerceAWS/lib/ordersAppLayers-stack.ts:50:9)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:40:30)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/OrdersAppLayers/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/OrdersAppLayers/OrdersLayer/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/OrdersAppLayers/OrdersApiLayer/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/OrdersAppLayers/orderEventsLayer/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/OrdersAppLayers/orderEventsRepositoryLayer/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "/ProductsAppLayers": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:26:31)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    },
+    {
+      "type": "aws:cdk:stack-tags",
+      "data": [
+        {
+          "key": "cost",
+          "value": "ECommerce"
+        },
+        {
+          "key": "team",
+          "value": "Myteam"
+        }
+      ]
+    }
+  ],
+  "/ProductsAppLayers/ProductLayer": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "code": "*",
+        "compatibleRuntimes": "*",
+        "layerVersionName": "*",
+        "removalPolicy": "retain"
+      }
+    }
+  ],
+  "/ProductsAppLayers/ProductsLayerVersionArn": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parameterName": "*",
+        "stringValue": "*"
+      }
+    }
+  ],
+  "/ProductsAppLayers/ProductEventsLayer": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "code": "*",
+        "compatibleRuntimes": "*",
+        "layerVersionName": "*",
+        "removalPolicy": "retain"
+      }
+    }
+  ],
+  "/ProductsAppLayers/ProductEventsLayerVersionArn": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parameterName": "*",
+        "stringValue": "*"
+      }
+    }
+  ],
+  "/ProductsAppLayers/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsAppLayers/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsAppLayers/ProductLayer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductLayerE9858DB9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LayerVersion2 in aws-cdk-lib...",
+        "new ProductsAppLayerStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productAppLayers-stack.ts:10:32)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:26:31)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsAppLayers/ProductsLayerVersionArn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductsLayerVersionArn9E522855"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new StringParameter2 in aws-cdk-lib...",
+        "new ProductsAppLayerStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productAppLayers-stack.ts:16:9)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:26:31)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsAppLayers/ProductEventsLayer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductEventsLayer7DB7704C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LayerVersion2 in aws-cdk-lib...",
+        "new ProductsAppLayerStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productAppLayers-stack.ts:21:44)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:26:31)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsAppLayers/ProductEventsLayerVersionArn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductEventsLayerVersionArn123FCBD1"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new StringParameter2 in aws-cdk-lib...",
+        "new ProductsAppLayerStack (/home/victor-ramos/Documents/ECommerceAWS/lib/productAppLayers-stack.ts:27:9)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:26:31)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ProductsAppLayers/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductsAppLayers/ProductLayer/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/ProductsAppLayers/ProductEventsLayer/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ]
+}

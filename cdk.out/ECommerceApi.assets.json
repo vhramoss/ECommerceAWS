@@ -1,0 +1,21 @@
+{
+  "version": "53.0.0",
+  "files": {
+    "0782af1d6291d045f50d494195deb14640fe6c96e94abb6fa5f9cede79716785": {
+      "displayName": "ECommerceApi Template",
+      "source": {
+        "path": "ECommerceApi.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "878670310640-us-east-1-3a1ea46b": {
+          "bucketName": "cdk-hnb659fds-assets-878670310640-us-east-1",
+          "objectKey": "0782af1d6291d045f50d494195deb14640fe6c96e94abb6fa5f9cede79716785.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::878670310640:role/cdk-hnb659fds-file-publishing-role-878670310640-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

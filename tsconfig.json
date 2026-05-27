@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "lib": [
       "es2022",
       "DOM"
@@ -32,9 +32,23 @@
       "/opt/nodejs/productsLayer": [
         "./lambda/products/layers/productsLayer/nodejs/productRepository"
       ],
-      "/opt/nodejs/productsLayer/*": [
-        "./lambda/products/layers/productsLayer/nodejs/*"
-      ]
+      "/opt/nodejs/productEventsLayer": [
+        "./lambda/products/layers/productEventsLayer/nodejs/productEvent.ts"
+      ],
+
+      "/opt/nodejs/ordersLayer": [
+        "./lambda/orders/layers/ordersLayer/nodejs/orderRepository"
+      ],
+
+      "/opt/nodejs/ordersApiLayer": [
+        "./lambda/orders/layers/ordersApiLayer/nodejs/orderApi"
+      ],
+      "/opt/nodejs/orderEventsLayer": [
+        "./lambda/orders/layers/orderEventsLayer/nodejs/orderEvent"
+      ],
+      "/opt/nodejs/orderEventsRepositoryLayer": [
+        "./lambda/orders/layers/orderEventsRepositoryLayer/nodejs/orderEventRepository"
+      ],
     }
   },
   "exclude": [

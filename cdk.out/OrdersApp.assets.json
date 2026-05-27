@@ -1,0 +1,51 @@
+{
+  "version": "53.0.0",
+  "files": {
+    "23a4c1398520ea19bf04cd66772d2fb43a38ac1f7034785641c018184ec9bd4a": {
+      "displayName": "OrdersFunction/Code",
+      "source": {
+        "path": "asset.23a4c1398520ea19bf04cd66772d2fb43a38ac1f7034785641c018184ec9bd4a",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "878670310640-us-east-1-27960333": {
+          "bucketName": "cdk-hnb659fds-assets-878670310640-us-east-1",
+          "objectKey": "23a4c1398520ea19bf04cd66772d2fb43a38ac1f7034785641c018184ec9bd4a.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::878670310640:role/cdk-hnb659fds-file-publishing-role-878670310640-us-east-1"
+        }
+      }
+    },
+    "ef53e965a7f294081daa94aef9caf4367dfac96d139b1afc9dde153f19519ad1": {
+      "displayName": "OrderEventsFunction/Code",
+      "source": {
+        "path": "asset.ef53e965a7f294081daa94aef9caf4367dfac96d139b1afc9dde153f19519ad1",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "878670310640-us-east-1-2f2d9fb0": {
+          "bucketName": "cdk-hnb659fds-assets-878670310640-us-east-1",
+          "objectKey": "ef53e965a7f294081daa94aef9caf4367dfac96d139b1afc9dde153f19519ad1.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::878670310640:role/cdk-hnb659fds-file-publishing-role-878670310640-us-east-1"
+        }
+      }
+    },
+    "1036a25c67b3f8c6ded4eee5d8291c35bcc83a24f2566531aa2db8e0e6545840": {
+      "displayName": "OrdersApp Template",
+      "source": {
+        "path": "OrdersApp.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "878670310640-us-east-1-d002c309": {
+          "bucketName": "cdk-hnb659fds-assets-878670310640-us-east-1",
+          "objectKey": "1036a25c67b3f8c6ded4eee5d8291c35bcc83a24f2566531aa2db8e0e6545840.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::878670310640:role/cdk-hnb659fds-file-publishing-role-878670310640-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

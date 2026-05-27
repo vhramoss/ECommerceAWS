@@ -1,0 +1,137 @@
+{
+  "/EventsDdb": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:22:24)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    },
+    {
+      "type": "aws:cdk:stack-tags",
+      "data": [
+        {
+          "key": "cost",
+          "value": "ECommerce"
+        },
+        {
+          "key": "team",
+          "value": "Myteam"
+        }
+      ]
+    }
+  ],
+  "/EventsDdb/EventsDdb": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "tableName": "*",
+        "removalPolicy": "destroy",
+        "partitionKey": {
+          "name": "*",
+          "type": "S"
+        },
+        "sortKey": {
+          "name": "*",
+          "type": "S"
+        },
+        "timeToLiveAttribute": "*",
+        "billingMode": "PROVISIONED",
+        "readCapacity": "*",
+        "writeCapacity": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:hasPhysicalName",
+      "data": {
+        "Ref": "EventsDdbF6692630"
+      }
+    }
+  ],
+  "/EventsDdb/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/EventsDdb/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/EventsDdb/EventsDdb/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "EventsDdbF6692630"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Table2 in aws-cdk-lib...",
+        "new EventsDdbStack (/home/victor-ramos/Documents/ECommerceAWS/lib/eventsDdb-stack.ts:11:22)",
+        "<anonymous> (/home/victor-ramos/Documents/ECommerceAWS/bin/e_commerce_aws.ts:22:24)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/EventsDdb/EventsDdb/ScalingRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/EventsDdb/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/EventsDdb/Exports/Output{\"Fn::GetAtt\":[\"EventsDdbF6692630\",\"Arn\"]}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputFnGetAttEventsDdbF6692630Arn3CB4F1C7"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/EventsDdb/Exports/Output{\"Ref\":\"EventsDdbF6692630\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefEventsDdbF6692630A5AF3A92"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ]
+}
