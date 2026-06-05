@@ -1,5 +1,5 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult, Context } from "aws-lambda"
-import { DynamoDB, SNS } from "aws-sdk"
+import { DynamoDB, EventBridge, SNS } from "aws-sdk"
 import * as AWSXRay from 'aws-xray-sdk'
 import { CarrierType, OrderProductResponse, OrderRequest, OrderResponse, PaymentType, ShippingType } from "./layers/ordersApiLayer/nodejs/orderApi"
 import { Order, OrderRepository } from "/opt/nodejs/ordersLayer"
@@ -12,9 +12,11 @@ AWSXRay.captureAWS(require("aws-sdk"))
 const ordersDdb = process.env.ORDERS_DDB!
 const productsDdb = process.env.PRODUCTS_DDB!
 const orderEventsTopicArn = process.env.ORDER_EVENTS_TOPIC_ARN
+const auditBusName = process.env.AUDIT_BUS_NAME!
 
 const ddbClient = new DynamoDB.DocumentClient()
 const snsClient = new SNS()
+const eventBridgeClient = new EventBridge()
 
 const orderRepository = new OrderRepository(ddbClient, ordersDdb)
 const productRepository = new ProductRepository(ddbClient, productsDdb)
@@ -86,6 +88,24 @@ export async function handler(event: APIGatewayProxyEvent, context: Context): Pr
                 body: JSON.stringify(convertToOrderResponse(order))
             }
         } else {
+            console.error('Some product was not found')
+            
+            const result = await eventBridgeClient.putEvents({
+                Entries: [
+                    {
+                        Source: 'app.order',
+                        EventBusName: auditBusName,
+                        DetailType: 'order',
+                        Time: new Date(),
+                        Detail: JSON.stringify({
+                            reason: 'PRODUCT_NOT_FOUND',
+                            orderRequest: orderRequest
+                        })
+                    }
+                ]
+            }).promise()
+            console.log(result)
+            
             return {
                 statusCode: 404,
                 body: "Some product was not found"
@@ -124,7 +144,7 @@ export async function handler(event: APIGatewayProxyEvent, context: Context): Pr
 
 function sendOrderEvent(order: Order, eventType: OrderEventType, lambdaRequestId: string) {
     const productCodes: string[] = []
-    order.products.forEach((product) => {
+    order.products?.forEach((product) => {
         productCodes.push(product.code)
     })
     const orderEvent: OrderEvent = {
@@ -141,13 +161,19 @@ function sendOrderEvent(order: Order, eventType: OrderEventType, lambdaRequestId
     }
     return snsClient.publish({
         TopicArn: orderEventsTopicArn,
-        Message: JSON.stringify(envelope)
+        Message: JSON.stringify(envelope),
+        MessageAttributes: {
+            eventType: {
+                DataType: "String",
+                StringValue: eventType
+            }
+        }
     }).promise()
 }
 
 function convertToOrderResponse(order: Order): OrderResponse {
     const orderProducts: OrderProductResponse[] = []
-    order.products.forEach((product) => {
+    order.products?.forEach((product) => {
         orderProducts.push({
             code: product.code,
             price: product.price
@@ -157,7 +183,7 @@ function convertToOrderResponse(order: Order): OrderResponse {
         email: order.pk,
         id: order.sk!,
         createdAt: order.createdAt!,
-        products: orderProducts,
+        products: orderProducts.length ? orderProducts: undefined,
         billing: {
             payment: order.billing.payment as PaymentType,
             totalPrice: order.billing.totalPrice

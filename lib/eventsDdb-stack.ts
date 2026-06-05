@@ -21,8 +21,18 @@ export class EventsDdbStack extends cdk.Stack {
             },
             timeToLiveAttribute: "ttl",
             billingMode: dynamodb.BillingMode.PROVISIONED,
-            readCapacity: 1,
-            writeCapacity: 1
+        })
+        this.table.addGlobalSecondaryIndex({
+            indexName: "emailIndex",
+            partitionKey: {
+                name: "email",
+                type: dynamodb.AttributeType.STRING,
+            },
+            sortKey: {
+                name: "sk",
+                type: dynamodb.AttributeType.STRING,
+            },
+            projectionType: dynamodb.ProjectionType.ALL,
         })
     }
 }
